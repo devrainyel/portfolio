@@ -11,21 +11,28 @@ export function Navbar() {
 
   return (
     <header>
-      <nav className='hidden lg:flex justify-between navbar fixed top-0 left-0 right-0 px-20 py-6 font-heading border-b border-[#9e9e9e]'>
-        <img src="" alt="brand-logo" />
+      <nav className='flex justify-between items-center navbar fixed top-0 left-0 right-0 px-10 py-8 font-heading'>
+        <p className="font-heading font-extrabold text-sm 2xs:text-lg sm:text-2xl text-[#EDEDED]">Rainyel.dev</p>
         <ul className='flex space-x-6'>
           {navLinks.map((link) => {
             return(
               <li key={link.path}>
             <NavLink
               to={link.path}
-              className='hover:text-green-400 font-extrabold'
+              className='hidden md:flex hover:color-primary font-extrabold p-3'
             >
               {link.name}
             </NavLink>
             </li>
             );
           })}
+          <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </ul>
       </nav>
     </header>

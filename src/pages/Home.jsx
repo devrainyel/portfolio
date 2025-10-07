@@ -1,28 +1,53 @@
 import { Navbar } from '../components/Navbar';
-import './Home.css';
+import { SocialLinks } from '../components/SocialLinks';
 
 export function Home() {
   return (
     <>
       <title>Home</title>
       <Navbar />
-      <main className="flex flex-col min-h-screen">
-        <section className="hero flex flex-1 justify-center items-center bg-gray-900">
-          <div className="hexagon"></div>
-          <div className="flex flex-row items-center justify-center">
-            <div className="left-heading-container mb-40">
-              <h6 className="font-black text-8xl mb-">FRONT-END</h6>
-              <p >Building beautiful designs with code</p>
-            </div>
-            <img src="/hero-img.png" alt="hero-img" className="" />
-            <div className="left-heading-container mt-40">
-              <p>A developer with a passion for building websites</p>
-              <h6 className="font-black text-8xl">DEVELOPER</h6>
+      {/* <main className='flex min-h-screen'>
+        <div className='flex flex-1 flex-col justify-center items-center'>
+          <div className='flex'>
+            <h6 className='text-8xl font-black'>FRONT-END DEVELOPER</h6>
+          </div>
+        </div>
+      </main> */}
+      <main>
+        <section class='min-h-screen flex flex-col justify-center items-center gap-y-20'>
+          <div className='flex justify-center items-center px-10'>
+            <div>
+              <h1 className='text-3xl 2xs:text-5xl xs:text-7xl sm:text-8xl font-black bg-gradient-to-r from-[#00A8CC] to-[#6C63FF] bg-clip-text text-transparent text-center'>
+                FRONT-END
+              </h1>
+              <h1 className='text-3xl 2xs:text-5xl xs:text-7xl sm:text-8xl font-black bg-gradient-to-r from-[#00A8CC] to-[#6C63FF] bg-clip-text text-transparent text-center mb-10'>
+                DEVELOPER
+              </h1>
+
+              <p className='text-2xs xs:text-base sm:text-xl text-justify text-[#EDEDED]'>
+                I’m a passionate developer who brings ideas to life through
+                clean and responsive web designs. I build smooth user
+                experiences and can handle both front-end and back-end
+                development. With a love for problem-solving and learning, I’m
+                ready to help create projects that truly stand out.
+              </p>
             </div>
           </div>
+          <div className='relative border-b-2 border-[#6C63FF] w-[180px]'>
+            <img
+              src='/blob-haikei.png'
+              alt='background blob'
+              className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] -z-10 opacity-50'
+            />
+            <img
+              src='/hero-img.png'
+              className='w-[180px] relative z-10'
+              alt=''
+            />
+          </div>
+          <SocialLinks />
         </section>
       </main>
-
     </>
   );
 }

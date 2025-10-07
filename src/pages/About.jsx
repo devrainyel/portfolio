@@ -7,7 +7,7 @@ export function About() {
       <Navbar />
       <section className="hero min-h-screen flex justify-center items-center bg-gray-900">
       <div>
-            <p className='text-green-400 font-black'>About</p>
+        <h6 className="text-5xl font-black">Hey</h6>
       </div>
       </section>
     </>
