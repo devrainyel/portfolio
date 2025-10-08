@@ -1,7 +1,11 @@
-import { NavLink } from 'react-router';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaTimes, FaBars } from 'react-icons/fa';
 import './Navbar.css';
 
 export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navLinks = [
     { name: 'HOME', path: '/' },
     { name: 'ABOUT', path: '/about' },
@@ -10,31 +14,63 @@ export function Navbar() {
   ];
 
   return (
-    <header>
-      <nav className='flex justify-between items-center navbar fixed top-0 left-0 right-0 px-10 py-8 font-heading'>
-        <p className="font-heading font-extrabold text-sm 2xs:text-lg sm:text-2xl text-[#EDEDED]">Rainyel.dev</p>
-        <ul className='flex space-x-6'>
-          {navLinks.map((link) => {
-            return(
+    <>
+      <nav className="fixed top-0 left-0 w-full bg-[#0b0c10]/80 backdrop-blur-md text-white z-50">
+        <div className="flex items-center justify-between px-10 xl:px-40 py-4 w-full">
+          {/* Logo / Name */}
+          <p className="text-xs md:text-lg font-bold text-primary">Rainyel.dev</p>
+
+          {/* Desktop Links */}
+          <ul className="hidden md:flex space-x-8">
+            {navLinks.map((link) => (
               <li key={link.path}>
-            <NavLink
-              to={link.path}
-              className='hidden md:flex hover:color-primary font-extrabold p-3'
-            >
-              {link.name}
-            </NavLink>
-            </li>
-            );
-          })}
-          <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `font-semibold tracking-wide hover:text-primary transition-colors ${
+                      isActive ? 'text-primary' : 'text-white'
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <button
+            id="menu-btn"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-white focus:outline-none z-50"
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
           </button>
-        </ul>
+        </div>
       </nav>
-    </header>
+
+      {/* Mobile Dropdown Menu - Full Screen */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 bg-[#0b0c10] z-40 flex flex-col items-center justify-center">
+          <ul className="flex flex-col items-center space-y-8">
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <NavLink
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `block font-semibold text-2xl tracking-wide py-2 hover:text-primary transition-colors ${
+                      isActive ? 'text-primary' : 'text-white'
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </>
   );
 }

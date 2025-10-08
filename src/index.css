@@ -14,30 +14,68 @@
 
   --breakpoint-xs: 523px;
   --breakpoint-2xs: 388px;
+
+  
 }
 
 @layer base {
-  body {
+  :root {
+    --background: #E6EDF0;
+    --foreground: #111827;
+
+    --border: #D0D7DB;
+  }
+
+  .dark {
+    --background: #0D0D0F;
+    --foreground: #00FFFF;
+  }
+  
+  
+  /* body {
     font-family: var(--font-inter);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 
   section {
     background-color: var(--bg-light);
-  }
+  } */
 
 
-   li {
-    color: var(--text-muted);
-  }
+}
 
-  p {
-    color: var(--text-main);
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
   }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+@utility card {
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
 
