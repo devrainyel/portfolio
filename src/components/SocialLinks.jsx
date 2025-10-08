@@ -7,7 +7,7 @@ export function SocialLinks() {
         href='https://facebook.com'
         target='_blank'
         rel='noopener noreferrer'
-        className='text-white transition-colors'
+        className='text-[#111827] transition-colors'
       >
         <FaFacebook />
       </a>
@@ -16,7 +16,7 @@ export function SocialLinks() {
         href='https://instagram.com'
         target='_blank'
         rel='noopener noreferrer'
-        className='text-white transition-colors'
+        className='text-[#111827] transition-colors'
       >
         <FaLinkedin />
       </a>
@@ -25,7 +25,7 @@ export function SocialLinks() {
         href='https://twitter.com'
         target='_blank'
         rel='noopener noreferrer'
-        className='text-white transition-colors'
+        className='text-[#111827] transition-colors'
       >
         <FaTwitter />
       </a>
@@ -34,7 +34,7 @@ export function SocialLinks() {
         href='https://github.com'
         target='_blank'
         rel='noopener noreferrer'
-        className='text-white transition-colors'
+        className='text-[#111827] transition-colors'
       >
         <FaGithub />
       </a>

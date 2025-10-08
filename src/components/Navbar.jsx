@@ -15,10 +15,10 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full bg-[#0b0c10]/80 backdrop-blur-md text-white z-50">
-        <div className="flex items-center justify-between px-10 xl:px-40 py-4 w-full">
+      <nav className="fixed top-0 left-0 w-full  backdrop-blur-md text-white z-50">
+        <div className="flex items-center justify-between px-5 xl:px-40 py-5 w-full">
           {/* Logo / Name */}
-          <p className="text-xs md:text-lg font-bold text-primary">Rainyel.dev</p>
+          <p className="text-xs md:text-lg font-bold text-[#4B5563]">Rainyel</p>
 
           {/* Desktop Links */}
           <ul className="hidden md:flex space-x-8">
@@ -42,7 +42,7 @@ export function Navbar() {
           <button
             id="menu-btn"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white focus:outline-none z-50"
+            className="md:hidden text-black focus:outline-none z-50"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
