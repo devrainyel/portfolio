@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
-@import url(https://db.onlinewebfonts.com/c/b11a10b450aefd4d399fb070f7c94bae?family=Sofia+Pro+Medium);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/b11a10b450aefd4d399fb070f7c94bae?family=Sofia+Pro+Medium');
 @import 'tailwindcss';
 
 @theme {
-  --font-inter: 'Inter', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-main: "Sofia Pro Medium";
   --color-primary: #00A8CC;
   --color-secondary: #6C63FF;
-  --bg-light: #0D0D0F;
-  --font-main: "Sofia Pro Medium";
   --text-main: #4B5563;
   --text-muted: #4B5563;
 
-  --breakpoint-xs: 523px;
-  --breakpoint-2xs: 388px;
+  --breakpoint-xs: 470px;
 
   @keyframes wave {
     0%, 100% {
@@ -22,79 +20,46 @@
     50% {
       transform: translateY(-10px);
     }
+
+    --animate-wave: wave 0.6s ease-in-out infinite;
   }
-
-  --animate-wave: wave 0.6s ease-in-out infinite;
 }
-
-
-
 
 
 @layer base {
   :root {
     --background: #E6EDF0;
-    --foreground: #111827;
-
-    --border: #D0D7DB;
+    --foreground: #4B5563;
   }
 
   .dark {
     --background: #0D0D0F;
-    --foreground: #00FFFF;
+    --foreground: #E6EDF0;
+  }
+  
+  body {
+    background-color: var(--background);
   }
   
   p {
     font-family: var(--font-main);
+    color: var(--foreground);
   }
 
-  body {
-    color: var(--text-muted)
-  }
-  /* body {
-    font-family: var(--font-inter);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
+  h3 {
     font-family: var(--font-heading);
-    color: var(--color-secondary);
+    color: var(--foreground);
   }
 
-  section {
-    background-color: var(--bg-light);
-  } */
+  h1, nav {
+    @apply font-heading font-extrabold;
+  }
 
+  .mobile-dropdown {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-extrabold;
+  }
 
 }
-
-@utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-
-  @media (width >= 640px) {
-    max-width: 640px;
-  }
-  @media (width >= 768px) {
-    max-width: 768px;
-  }
-  @media (width >= 1024px) {
-    max-width: 1024px;
-  }
-  @media (width >= 1280px) {
-    max-width: 1280px;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
-}
-
-@utility text-glow {
-  @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
-}
-
-@utility card {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
-}
-
 

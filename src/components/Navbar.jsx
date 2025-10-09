@@ -1,11 +1,21 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import { MdOutlineDarkMode } from "react-icons/md";
-import './Navbar.css';
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setDark] = useState(false);
+
+  const setTheme = () => {
+    if(isDark) {
+      document.documentElement.classList.remove("dark");
+      setDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      setDark(true);
+    }
+  }
 
   const navLinks = [
     { name: 'HOME', path: '/' },
@@ -28,8 +38,8 @@ export function Navbar() {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `font-black tracking-wide hover:text-primary transition-colors ${
-                      isActive ? 'text-primary' : 'text-[#4B5563]'
+                    `font-black tracking-wide text-[#4B5563] hover:text-[#1c1d1e] transition-colors ${
+                      isActive && 'border-b'
                     }`
                   }
                 >
@@ -37,8 +47,7 @@ export function Navbar() {
                 </NavLink>
               </li>
             ))}
-                <MdOutlineDarkMode className="text-[#4B5563] align-middle" size={32}/>
-
+                <li onClick={setTheme}>{isDark ? <MdOutlineLightMode className="text-[#4B5563] align-middle" size={25} />  : <MdOutlineDarkMode className="text-[#4B5563] align-middle" size={25}/>}</li>
           </ul>
 
           {/* Mobile Menu Button */}
@@ -54,7 +63,7 @@ export function Navbar() {
 
       {/* Mobile Dropdown Menu - Full Screen */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 bg-[#0b0c10] z-40 flex flex-col items-center justify-center">
+        <div className="mobile-dropdown md:hidden fixed inset-0 bg-[#E6EDF0] z-40 flex flex-col items-center justify-center">
           <ul className="flex flex-col items-center space-y-8">
             {navLinks.map((link) => (
               <li key={link.path}>
@@ -62,8 +71,8 @@ export function Navbar() {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `block font-semibold text-2xl tracking-wide py-2 hover:text-primary transition-colors ${
-                      isActive ? 'text-primary' : 'text-white'
+                    `block text-xl tracking-wide py-2 ${
+                      isActive && 'border-b'
                     }`
                   }
                 >
@@ -71,6 +80,23 @@ export function Navbar() {
                 </NavLink>
               </li>
             ))}
+            <li
+        onClick={() => {
+          setTheme();
+          setIsOpen(false);
+        }}
+        className="flex items-center space-x-2 cursor-pointer text-xl tracking-wide py-2"
+      >
+        {isDark ? (
+          <>
+            <span>LIGHT MODE</span>
+          </>
+        ) : (
+          <>
+            <span>DARK MODE</span>
+          </>
+        )}
+      </li>
           </ul>
         </div>
       )}
