@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import { MdOutlineDarkMode } from "react-icons/md";
 import './Navbar.css';
 
 export function Navbar() {
@@ -16,9 +17,9 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full  backdrop-blur-md text-white z-50">
-        <div className="flex items-center justify-between px-5 xl:px-40 py-5 w-full">
+        <div className="flex items-center justify-between px-5 xl:px-40 py-5 lg:py-8 w-full">
           {/* Logo / Name */}
-          <p className="text-xs md:text-lg font-bold text-[#4B5563]">Rainyel</p>
+          <NavLink to="/" className="text-lg md:text-lg font-bold text-[#4B5563]">Rainyel.dev</NavLink>
 
           {/* Desktop Links */}
           <ul className="hidden md:flex space-x-8">
@@ -27,8 +28,8 @@ export function Navbar() {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `font-semibold tracking-wide hover:text-primary transition-colors ${
-                      isActive ? 'text-primary' : 'text-white'
+                    `font-black tracking-wide hover:text-primary transition-colors ${
+                      isActive ? 'text-primary' : 'text-[#4B5563]'
                     }`
                   }
                 >
@@ -36,15 +37,17 @@ export function Navbar() {
                 </NavLink>
               </li>
             ))}
+                <MdOutlineDarkMode className="text-[#4B5563] align-middle" size={32}/>
+
           </ul>
 
           {/* Mobile Menu Button */}
           <button
             id="menu-btn"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-black focus:outline-none z-50"
+            className="md:hidden text-[#4B5563] focus:outline-none z-50"
           >
-            {isOpen ? <FaTimes /> : <FaBars />}
+            {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
           </button>
         </div>
       </nav>

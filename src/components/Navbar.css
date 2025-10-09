@@ -1,4 +1,4 @@
-a.active {
+/* a.active {
   color: #00A8CC;
 }
 
@@ -35,4 +35,4 @@ a::after {
 a:hover::before,
 a:hover::after {
   transform: scaleX(1);
-}
+} */

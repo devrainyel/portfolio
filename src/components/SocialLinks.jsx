@@ -2,14 +2,14 @@ import { FaFacebook, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 
 export function SocialLinks() {
   return (
-    <div className='flex gap-4 text-2xl'>
+    <div className='flex gap-7 text-2xl p-2 bg-[#ecedee] rounded-md drop-shadow-2xl'>
       <a
         href='https://facebook.com'
         target='_blank'
         rel='noopener noreferrer'
         className='text-[#111827] transition-colors'
       >
-        <FaFacebook />
+        <FaFacebook size={30} />
       </a>
 
       <a
@@ -18,7 +18,7 @@ export function SocialLinks() {
         rel='noopener noreferrer'
         className='text-[#111827] transition-colors'
       >
-        <FaLinkedin />
+        <FaLinkedin size={30} />
       </a>
 
       <a
@@ -27,16 +27,16 @@ export function SocialLinks() {
         rel='noopener noreferrer'
         className='text-[#111827] transition-colors'
       >
-        <FaTwitter />
+        <FaTwitter size={30} />
       </a>
 
       <a
         href='https://github.com'
         target='_blank'
         rel='noopener noreferrer'
-        className='text-[#111827] transition-colors'
+        className='text-[#111827] transition-colors hover:text-[#4B5563]'
       >
-        <FaGithub />
+        <FaGithub size={30} />
       </a>
     </div>
   );
