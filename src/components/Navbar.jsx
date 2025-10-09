@@ -29,7 +29,7 @@ export function Navbar() {
       <nav className="fixed top-0 left-0 w-full  backdrop-blur-md text-white z-50">
         <div className="flex items-center justify-between px-5 xl:px-40 py-5 lg:py-8 w-full">
           {/* Logo / Name */}
-          <NavLink to="/" className="text-lg md:text-lg font-bold text-[#4B5563]">Rainyel.dev</NavLink>
+          <NavLink to="/" className="text-lg md:text-lg font-bold text-[#00A8CC]">Rainyel.dev</NavLink>
 
           {/* Desktop Links */}
           <ul className="hidden md:flex space-x-8">
@@ -38,7 +38,7 @@ export function Navbar() {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `font-black tracking-wide text-[#4B5563] hover:text-[#1c1d1e] transition-colors ${
+                    `font-black tracking-wide transition-colors ${
                       isActive && 'border-b'
                     }`
                   }
@@ -47,7 +47,7 @@ export function Navbar() {
                 </NavLink>
               </li>
             ))}
-                <li onClick={setTheme}>{isDark ? <MdOutlineLightMode className="text-[#4B5563] align-middle" size={25} />  : <MdOutlineDarkMode className="text-[#4B5563] align-middle" size={25}/>}</li>
+                <li onClick={setTheme}>{isDark ? <MdOutlineLightMode className="align-middle cursor-pointer" size={25} />  : <MdOutlineDarkMode className="align-middle cursor-pointer" size={25}/>}</li>
           </ul>
 
           {/* Mobile Menu Button */}
@@ -63,7 +63,7 @@ export function Navbar() {
 
       {/* Mobile Dropdown Menu - Full Screen */}
       {isOpen && (
-        <div className="mobile-dropdown md:hidden fixed inset-0 bg-[#E6EDF0] z-40 flex flex-col items-center justify-center">
+        <div className="mobile-dropdown md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center">
           <ul className="flex flex-col items-center space-y-8">
             {navLinks.map((link) => (
               <li key={link.path}>

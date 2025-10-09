@@ -46,10 +46,11 @@
     color: var(--foreground);
   }
 
-  h3 {
+  h3, nav ul {
     font-family: var(--font-heading);
     color: var(--foreground);
   }
+
 
   h1, nav {
     @apply font-heading font-extrabold;

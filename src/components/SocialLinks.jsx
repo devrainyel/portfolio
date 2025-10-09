@@ -2,7 +2,7 @@ import { FaFacebook, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 
 export function SocialLinks() {
   return (
-    <div className='flex gap-7 text-2xl p-2 bg-[#ecedee] rounded-md drop-shadow-2xl'>
+    <div className='flex gap-7 text-2xl p-2 rounded-md drop-shadow-2xl'>
       <a
         href='https://facebook.com'
         target='_blank'
