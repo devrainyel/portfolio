@@ -43,7 +43,7 @@ export function Navbar() {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `font-black tracking-wide transition-colors ${
+                    `font-black ${
                       isActive && 'border-b'
                     }`
                   }

@@ -9,8 +9,8 @@ export function Home() {
       <title>Home</title>
       <div className='min-h-screen'>
         <Navbar />
-        <div className='flex flex-col items-center justify-center min-h-screen px-5'>
-          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block  mt-[88px]'>
+        <div className='flex flex-col items-center justify-center h-screen'>
+          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block'>
             {'FULL-STACK'.split('').map((letter, i) => (
               <span
                 key={i}
@@ -25,7 +25,7 @@ export function Home() {
             DEVELOPER
           </h1>
           <h3 className="font-extrabold text-xl sm:text-3xl mb-2">I'm Reniel</h3>
-          <p className='text-[13px] sm:text-lg text-center mb-20 max-w-[750px]'>
+          <p className='text-[13px] sm:text-lg text-center mb-20 px-5 max-w-[750px]'>
             I enjoy building modern web applications with React, Tailwind CSS,
             and JavaScript. I focus on creating clean, efficient, and
             user-centered experiences. My goal is to craft interfaces that feel
