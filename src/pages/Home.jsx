@@ -7,11 +7,11 @@ export function Home() {
   return (
     <>
       <title>Home</title>
-      <div className='min-h-screen bg-light'>
+      <div className='min-h-screen'>
         <Navbar />
         <div className='flex flex-col items-center justify-center min-h-screen px-5'>
-          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block'>
-            {'FRONT-END'.split('').map((letter, i) => (
+          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block  mt-[88px]'>
+            {'FULL-STACK'.split('').map((letter, i) => (
               <span
                 key={i}
                 className='inline-block animate-[wave_2s_ease-in-out_infinite] bg-gradient-to-t from-[#6C63FF] to-[#00A8CC] bg-clip-text text-transparent'
