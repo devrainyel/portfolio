@@ -7,7 +7,9 @@ export function Home() {
   return (
     <>
       <title>Home</title>
+      
       <div className='min-h-screen relative'>
+        <Navbar />
         <div className='fixed inset-0 z-0'>
         <LiquidEther
           colors={['#00a8cc', '#6c63ff', '#B19EEF']}
@@ -27,7 +29,6 @@ export function Home() {
           autoRampDuration={0.6}
         />
       </div>
-        <Navbar />
         <div className='flex flex-col items-center justify-center h-screen'>
           <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block'>
             {'FULL-STACK'.split('').map((letter, i) => (

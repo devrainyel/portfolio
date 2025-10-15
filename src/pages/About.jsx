@@ -47,13 +47,18 @@ export function About() {
                 continuously learning new tools and technologies to become a
                 more versatile developer.
               </p>
-              <div className='place-self-stretch'></div>
             </div>
-            <img
-              className='w-full border-2 rotate-3 border-white'
-              src='/hero-img.png'
-              alt=''
-            />
+            <div className='relative'>
+              <img
+                className='w-full border-2 border-white'
+                src='/hero-img.png'
+                alt=''
+              />
+              <div className='rounded-sm border border-[#4b5563] p-2 flex items-center gap-2 w-fit mx-auto absolute bottom-2 right-2 bg-[#4b5563]'>
+                <div className='w-3 h-3 rounded-full bg-emerald-400 animate-blink'></div>
+                <p className='text-sm text-emerald-400'>Open to Work</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
