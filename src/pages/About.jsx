@@ -8,8 +8,19 @@ import {
   FaGitAlt,
   FaGithub,
 } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiMysql, SiPostman, SiVitest } from 'react-icons/si';
-import { RiTailwindCssFill } from 'react-icons/ri';
+import {
+  SiMongodb,
+  SiExpress,
+  SiMysql,
+  SiPostman,
+  SiVitest,
+} from 'react-icons/si';
+import {
+  RiTailwindCssFill,
+  RiMessageFill,
+  RiLightbulbFlashFill,
+} from 'react-icons/ri';
+import { AiOutlineRise } from 'react-icons/ai';
 
 export function About() {
   return (
@@ -24,7 +35,7 @@ export function About() {
           </div>
           <div className='grid grid-cols-3 row-auto gap-20 max-w-6xl'>
             <div>
-              <h3 className='text-5xl font-black -rotate-3 bg-gradient-to-t from-[#00A8CC] to-[#6C63FF] text-transparent bg-clip-text'>
+              <h3 className='text-6xl font-black -rotate-3 bg-gradient-to-t from-[#00A8CC] to-[#6C63FF] text-transparent bg-clip-text'>
                 DRIVEN TO LEARN. INSPIRED TO CREATE.
               </h3>
             </div>
@@ -39,70 +50,108 @@ export function About() {
               <div className='place-self-stretch'></div>
             </div>
             <img
-              className='w-full border-2 rotate-3 border-white bg-[#00A8CC]'
+              className='w-full border-2 rotate-3 border-white'
               src='/hero-img.png'
               alt=''
             />
           </div>
         </div>
       </section>
-      <section className='flex flex-col gap-10 mt-10'>
-        <div>
-          <div className='mb-20 px-80'>
-            <div className='mb-10'>
-              <h3 className='text-6xl font-black'>FRONT-END</h3>
-              <ul className='tech-list flex gap-6 ml-10 mt-4'>
-                <li>
-                  <FaHtml5 size={50} />
-                </li>
-                <li>
-                  <FaBootstrap size={50} />
-                </li>
-                <li>
-                  <RiTailwindCssFill size={50} />
-                </li>
-                <li>
-                  <FaReact size={50} />
-                </li>
-              </ul>
+      <section className='flex flex-col items-center gap-10 mt-10'>
+        <h3 className='text-6xl font-black'>TECHNICAL SKILLS</h3>
+        <div className='mb-20 md:flex md:justify-center md:gap-20 md:mx-0'>
+          <div className='mb-10 text-center'>
+            <h3 className='text-4xl font-semibold'>FRONT-END</h3>
+            <ul className='tech-list flex gap-6 justify-center mt-4'>
+              <li>
+                <FaHtml5 size={50} />
+              </li>
+              <li>
+                <FaBootstrap size={50} />
+              </li>
+              <li>
+                <RiTailwindCssFill size={50} />
+              </li>
+              <li>
+                <FaReact size={50} />
+              </li>
+            </ul>
+          </div>
+
+          <div className='mb-10 text-center'>
+            <h3 className='text-4xl font-semibold'>BACK-END</h3>
+            <ul className='tech-list flex gap-6 justify-center mt-4'>
+              <li>
+                <FaPhp size={50} />
+              </li>
+              <li>
+                <FaNode size={50} />
+              </li>
+              <li>
+                <SiExpress size={50} />
+              </li>
+              <li>
+                <SiMongodb size={50} />
+              </li>
+              <li>
+                <SiMysql size={50} />
+              </li>
+            </ul>
+          </div>
+
+          <div className='text-center'>
+            <h3 className='text-4xl font-semibold'>TOOLS</h3>
+            <ul className='tech-list flex gap-6 justify-center mt-4'>
+              <li>
+                <FaGitAlt size={50} />
+              </li>
+              <li>
+                <FaGithub size={50} />
+              </li>
+              <li>
+                <SiPostman size={50} />
+              </li>
+              <li>
+                <SiVitest size={50} />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3 className='text-6xl font-black'>SOFT SKILLS</h3>
+        <div className='grid grid-cols-3 row-auto gap-20 max-w-6xl'>
+          <div className='border border-[#4b5563] rounded-md p-10'>
+            <div className='flex items-center gap-2 mb-5'>
+              <RiLightbulbFlashFill className='icon' size={25} />
+              <h3 className='text-xl font-extrabold'>Problem-Solving</h3>
             </div>
-            <div className='mb-10'>
-              <h3 className='text-6xl font-black'>BACK-END</h3>
-              <ul className='tech-list flex gap-6 ml-10 mt-4'>
-                <li>
-                  <FaPhp size={50} />
-                </li>
-                <li>
-                  <FaNode size={50} />
-                </li>
-                <li>
-                  <SiExpress size={50} />
-                </li>
-                <li>
-                  <SiMongodb size={50} />
-                </li>
-                <li>
-                  <SiMysql size={50} />
-                </li>
-              </ul>
+            <p>
+              I enjoy identifying challenges and finding efficient solutions
+              through logical thinking and creativity. I approach problems step
+              by step, focusing on understanding the root cause and delivering
+              practical results
+            </p>
+          </div>
+          <div className='border border-[#4b5563] rounded-md p-10'>
+            <div className='flex items-center gap-2 mb-5'>
+              <AiOutlineRise className='icon' size={25} />
+              <h3 className='text-xl font-extrabold'>Adaptability</h3>
             </div>
-            <div>
-              <h3 className='text-6xl font-black'>TOOLS</h3>
-              <ul className='tech-list flex gap-6 ml-10 mt-4'>
-                <li>
-                  <FaGitAlt size={50} />
-                </li>
-                <li>
-                  <FaGithub size={50} />
-                </li>
-                <li>
-                  <SiPostman size={50} />
-                </li>
-                <li>
-                  <SiVitest size={50} />
-                </li>
-              </ul>
+            <p>
+              I can easily adjust to new tools, environments, and workflows. I
+              see change as an opportunity to grow and learn, which helps me
+              stay flexible and productive in different situations.
+            </p>
+          </div>
+          <div className='border border-[#4b5563] rounded-md p-10'>
+            <div className='flex items-center gap-2 mb-5'>
+              <RiMessageFill className='icon' size={25} />
+              <h3 className='text-xl font-extrabold'>Communication</h3>
             </div>
+            <p>
+              I value teamwork and believe great results come from working
+              together. I communicate clearly, listen actively, and contribute
+              ideas to achieve shared goals with others.
+            </p>
           </div>
         </div>
       </section>

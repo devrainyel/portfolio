@@ -57,7 +57,7 @@
 
 
  h2, h3,
-  nav ul, .tech-list {
+  nav ul, .tech-list, .icon {
     font-family: var(--font-heading);
     color: var(--foreground);
   }
