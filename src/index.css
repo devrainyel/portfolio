@@ -55,9 +55,8 @@
     color: var(--foreground);
   }
 
-
  h2, h3,
-  nav ul, .tech-list, .icon {
+  nav ul {
     font-family: var(--font-heading);
     color: var(--foreground);
   }
@@ -71,6 +70,14 @@
     background-color: var(--background);
     color: var(--foreground);
     @apply font-extrabold;
+  }
+
+  /* Express icon: black in light mode*/
+  .express-icon, .github-icon {
+    color: #0d0d0f;
+  }
+  .dark .express-icon, .dark .github-icon  {
+    color: var(--foreground);
   }
 }
 
