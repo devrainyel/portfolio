@@ -56,7 +56,7 @@
   }
 
  h2, h3,
-  nav ul {
+  nav ul, .soft-skill-icon {
     font-family: var(--font-heading);
     color: var(--foreground);
   }
