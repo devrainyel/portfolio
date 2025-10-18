@@ -3,7 +3,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 export function SocialLinks() {
   return (
-    <div className="flex gap-7 text-2xl p-2 rounded-md drop-shadow-2xl">
+    <div className="flex gap-7 text-2xl p-2 rounded-md drop-shadow-2xl pointer-events-auto">
       {/* Facebook */}
       <div className="relative group">
         <a

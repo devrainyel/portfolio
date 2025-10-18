@@ -29,8 +29,8 @@ export function Home() {
           autoRampDuration={0.6}
         />
       </div>
-        <div className='flex flex-col items-center justify-center h-screen relative z-10 pointer-events-none'>
-          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block pointer-events-auto'>
+        <div className='flex flex-col items-center justify-center min-h-[calc(100vh-88px)] mt-[88px] md:min-h-[calc(100vh-96px)] md:mt-[96px]'>
+          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block'>
             {'FULL-STACK'.split('').map((letter, i) => (
               <span
                 key={i}
@@ -41,13 +41,13 @@ export function Home() {
               </span>
             ))}
           </h1>
-          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl  bg-gradient-to-t from-[#00A8CC] to-[#6C63FF] text-transparent bg-clip-text leading-none mb-20 pointer-events-auto'>
+          <h1 className='text-[40px] xs:text-[65px] sm:text-7xl  bg-gradient-to-t from-[#00A8CC] to-[#6C63FF] text-transparent bg-clip-text leading-none mb-20'>
             DEVELOPER
           </h1>
-          <h3 className='font-extrabold text-xl sm:text-3xl mb-2 pointer-events-auto'>
+          <h3 className='font-extrabold text-xl sm:text-3xl mb-2'>
             I'm Reniel
           </h3>
-          <p className='text-[13px] sm:text-lg text-center mb-20 px-5 max-w-[750px] pointer-events-auto'>
+          <p className='text-[13px] sm:text-lg text-center mb-20 px-5 max-w-[750px]'>
             I enjoy building modern web applications with React, Tailwind CSS,
             and JavaScript. I focus on creating clean, efficient, and
             user-centered experiences. My goal is to craft interfaces that feel
