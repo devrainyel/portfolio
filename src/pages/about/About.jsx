@@ -70,7 +70,7 @@ export function About() {
         <div className='grid grid-cols-3 row-auto gap-20 max-w-6xl'>
           <div className='border border-[#4b5563] rounded-md p-10'>
             <div className='flex items-center gap-2 mb-5'>
-              <RiLightbulbFlashFill className='soft-skill-icon' size={25} />
+              <RiLightbulbFlashFill className='icon' size={25} />
               <h3 className='text-xl font-extrabold'>Problem-Solving</h3>
             </div>
             <p>
@@ -82,7 +82,7 @@ export function About() {
           </div>
           <div className='border border-[#4b5563] rounded-md p-10'>
             <div className='flex items-center gap-2 mb-5'>
-              <AiOutlineRise className='soft-skill-icon' size={25} />
+              <AiOutlineRise className='icon' size={25} />
               <h3 className='text-xl font-extrabold'>Adaptability</h3>
             </div>
             <p>
@@ -93,7 +93,7 @@ export function About() {
           </div>
           <div className='border border-[#4b5563] rounded-md p-10'>
             <div className='flex items-center gap-2 mb-5'>
-              <RiMessageFill className='soft-skill-icon' size={25} />
+              <RiMessageFill className='icon' size={25} />
               <h3 className='text-xl font-extrabold'>Communication</h3>
             </div>
             <p>
