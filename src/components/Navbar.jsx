@@ -37,7 +37,7 @@ export function Navbar() {
           </NavLink>
 
           {/* Desktop Links */}
-          <ul className='hidden md:flex space-x-8'>
+          <ul className='hidden md:flex items-center justify-center space-x-8'>
             {navLinks.map((link) => (
               <li key={link.path}>
                 <NavLink
@@ -52,17 +52,16 @@ export function Navbar() {
                 </NavLink>
               </li>
             ))}
-            <li>
-              {' '}
-              <button onClick={setTheme} aria-label='Toggle dark mode'>
+            <li className='flex items-center'>
+              <button onClick={setTheme} aria-label='Toggle dark mode' className='flex items-center'>
                 {isDark ? (
                   <MdOutlineLightMode
-                    className='align-middle cursor-pointer'
+                    className='cursor-pointer'
                     size={25}
                   />
                 ) : (
                   <MdOutlineDarkMode
-                    className='align-middle cursor-pointer'
+                    className='cursor-pointer'
                     size={25}
                   />
                 )}
