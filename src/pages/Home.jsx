@@ -54,8 +54,8 @@ export function Home() {
             intuitive and meaningful to use.
           </p>
           <SocialLinks />
-          <footer className='text-center py-4 text-[#4B5563] text-[13px]   sm:text-lg'>
-            <p>© {new Date().getFullYear()} Rainyel. All rights reserved.</p>
+          <footer className='text-center py-4 text-[#4B5563] text-[13px]   sm:text-base'>
+            © {new Date().getFullYear()} Rainyel. All rights reserved.
           </footer>
         </div>
       </div>

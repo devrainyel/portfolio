@@ -54,25 +54,45 @@ export function About() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-10 mt-10">
-        <h3 className="text-6xl font-black">TECHNICAL SKILLS</h3>
-        <div className="mb-20 md:flex md:justify-center md:gap-20 md:mx-0">
-          <div className="mb-10 text-center">
-            <h3 className="text-4xl font-semibold">FRONT-END</h3>
-            <FrontendIcons />
-          </div>
 
-          <div className="mb-10 text-center">
-            <h3 className="text-4xl font-semibold">BACK-END</h3>
-            <BackendIcons />
-          </div>
+      <section className="min-h-screen border-y gap-10 border-amber-600 flex justify-center items-center">
+        <div className="max-w-6xl w-full">
+          
+          <h3 className="text-6xl font-black">TECH SKILLS</h3>
+          <div className="flex flex-col gap-14">
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <h3 className="col-span-5 text-4xl font-semibold break-words">
+                FRONT-END
+              </h3>
+              <div className="col-span-7 flex flex-wrap gap-4">
+                <FrontendIcons />
+              </div>
+            </div>
 
-          <div className="text-center">
-            <h3 className="text-4xl font-semibold">TOOLS</h3>
-            <ToolsIcons />
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <h3 className="col-span-5 text-4xl font-semibold break-words">
+                BACK-END
+              </h3>
+              <div className="col-span-7 flex flex-wrap gap-4">
+                <BackendIcons />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <h3 className="col-span-5 text-4xl font-semibold break-words">
+                TOOLS
+              </h3>
+              <div className="col-span-7 flex flex-wrap gap-4">
+                <ToolsIcons />
+              </div>
+            </div>
           </div>
         </div>
-        <h3 className="text-6xl font-black">SOFT SKILLS</h3>
+      </section>
+      <section className="min-h-screen flex flex-col gap-10 justify-center items-center">
+        <div className="w-full max-w-6xl">
+          <h3 className="text-6xl font-black">SOFT SKILLS</h3>
+        </div>
         <div className="grid grid-cols-3 row-auto gap-20 max-w-6xl">
           <div className="border border-[#4b5563] rounded-md p-10">
             <div className="flex items-center gap-2 mb-5">

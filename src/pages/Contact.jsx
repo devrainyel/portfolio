@@ -11,7 +11,7 @@ export function Contact() {
         <div className='mt-[88px]'>
           <div className='text-center mb-20'>
             <h3 className='text-6xl font-black'>LET'S CONNECT</h3>
-            <h4 className='text-lg font-black'>HAVE A PROJECT IN MIND?</h4>
+            <h4 className='text-lg font-black'>Have a project in mind? Let's hear it</h4>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-8 mx-5'>
             <div className='space-y-6 order-2 lg:order-1'>

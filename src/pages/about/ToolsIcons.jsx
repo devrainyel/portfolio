@@ -1,62 +1,37 @@
-import { siGit, siGithub, siPostman , siVitest } from "simple-icons/icons";
+import { siGit, siGithub, siPostman, siVitest } from "simple-icons/icons";
 
+const toolIcons = [
+  { icon: siGit, name: "Git" },
+  { icon: siGithub, name: "Github" },
+  { icon: siPostman, name: "Postman" },
+  { icon: siVitest, name: "Vitest" },
+];
 
 export function ToolsIcons() {
-    return (
-        <ul className='flex gap-6 justify-center mt-4'>
-        <li>
+  return (
+    <ul className="flex gap-6">
+      {toolIcons.map((toolIcon, index) => (
+        <li key={index} className="relative group">
           <svg
-        role="img"
-        viewBox="0 0 24 24"
-        width="50"
-        height="50"
-        xmlns="http://www.w3.org/2000/svg"
-        fill={`#${siGit.hex}`}
-      >
-        <title>{siGit.title}</title>
-        <path d={siGit.path} />
-      </svg>
+            role="img"
+            viewBox="0 0 24 24"
+            width="50"
+            height="50"
+            xmlns="http://www.w3.org/2000/svg"
+            className={toolIcon.icon === siGithub ? "github-icon" : ""}
+            fill={
+              toolIcon.icon === siGithub
+                ? "currentColor"
+                : `#${toolIcon.icon.hex}`
+            }
+          >
+            <path d={toolIcon.icon.path} />
+          </svg>
+          <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+            {toolIcon.name}
+          </span>
         </li>
-        <li>
-           <svg
-        role="img"
-        viewBox="0 0 24 24"
-        width="50"
-        height="50"
-        xmlns="http://www.w3.org/2000/svg"
-        className='github-icon'
-        fill="currentColor"
-      >
-        <title>{siGithub.title}</title>
-        <path d={siGithub.path} />
-      </svg>
-        </li>
-        <li>
-          <svg
-        role="img"
-        viewBox="0 0 24 24"
-        width="50"
-        height="50"
-        xmlns="http://www.w3.org/2000/svg"
-        fill={`#${siPostman.hex}`}
-      >
-        <title>{siPostman.title}</title>
-        <path d={siPostman.path} />
-      </svg>
-        </li>
-        <li>
-          <svg
-        role="img"
-        viewBox="0 0 24 24"
-        width="50"
-        height="50"
-        xmlns="http://www.w3.org/2000/svg"
-        fill={`#${siVitest.hex}`}
-      >
-        <title>{siVitest.title}</title>
-        <path d={siVitest.path} />
-      </svg>
-        </li>
-      </ul>
-    );
+      ))}
+    </ul>
+  );
 }
