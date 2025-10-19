@@ -1,7 +1,5 @@
 import { Navbar } from '../../components/Navbar';
 import { ContactForm } from './ContactForm';
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
 import { ContactInfo } from './ContactInfo';
 
 export function Contact() {

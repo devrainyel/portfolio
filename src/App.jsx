@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/about/About';
 import { Projects } from './pages/Projects';
-import { Contact } from './pages/Contact';
+import { Contact } from './pages/contact/Contact';
 import { NotFound } from './pages/NotFound';
 
 function App() {

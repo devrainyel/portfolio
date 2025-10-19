@@ -1,4 +1,4 @@
-import { siGit, siGithub, siPostman, siVitest } from "simple-icons/icons";
+import { siGit, siGithub, siPostman, siVitest } from "simple-icons";
 
 const toolIcons = [
   { icon: siGit, name: "Git" },

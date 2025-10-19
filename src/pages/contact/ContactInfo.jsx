@@ -1,3 +1,6 @@
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+
 export function ContactInfo() {
   return (
     <div className='space-y-6 order-2 lg:order-1'>
