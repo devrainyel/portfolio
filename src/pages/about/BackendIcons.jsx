@@ -18,7 +18,7 @@ export function BackendIcons() {
   return (
     <ul className="flex flex-wrap gap-6">
       {backendSkills.map((backendSkill, index) => (
-        <li key={index} className="relative group">
+        <li key={index} className="relative group transition-transform duration-300 hover:scale-110">
           <svg
             role="img"
             viewBox="0 0 24 24"

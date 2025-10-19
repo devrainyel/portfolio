@@ -11,7 +11,7 @@ export function ToolsIcons() {
   return (
     <ul className="flex gap-6">
       {toolIcons.map((toolIcon, index) => (
-        <li key={index} className="relative group">
+        <li key={index} className="relative group transition-transform duration-300 hover:scale-110">
           <svg
             role="img"
             viewBox="0 0 24 24"

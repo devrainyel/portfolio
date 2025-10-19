@@ -55,10 +55,10 @@ export function About() {
         </div>
       </section>
 
-      <section className="min-h-screen border-y gap-10 border-amber-600 flex justify-center items-center">
+      <section className="mt-40 gap-10 flex justify-center items-center">
         <div className="max-w-6xl w-full">
           
-          <h3 className="text-6xl font-black">TECH SKILLS</h3>
+          <h3 className="text-6xl font-black mb-10">TECH SKILLS</h3>
           <div className="flex flex-col gap-14">
             <div className="grid grid-cols-12 gap-4 items-center">
               <h3 className="col-span-5 text-4xl font-semibold break-words">
@@ -89,7 +89,7 @@ export function About() {
           </div>
         </div>
       </section>
-      <section className="min-h-screen flex flex-col gap-10 justify-center items-center">
+      <section className="mt-40 flex flex-col gap-10 justify-center items-center">
         <div className="w-full max-w-6xl">
           <h3 className="text-6xl font-black">SOFT SKILLS</h3>
         </div>
