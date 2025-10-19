@@ -44,38 +44,7 @@ export function Projects() {
                 TESDA LEAVE MANAGEMENT SYSTEM (TLMS)
               </h3>
             </div>
-            <div className='card border border-[#4b5563] w-full'>
-              <div>
-                <div className='w-full bg-amber-300 h-96'></div>
-              </div>
-               <h3 className='p-5 font-black text-center'>
-                TESDA LEAVE MANAGEMENT SYSTEM (TLMS)
-              </h3>
-            </div>
-            <div className='card border border-[#4b5563] w-full'>
-              <div>
-                <div className='w-full bg-amber-300 h-96'></div>
-              </div>
-               <h3 className='p-5 font-black text-center'>
-                TESDA LEAVE MANAGEMENT SYSTEM (TLMS)
-              </h3>
-            </div>
-            <div className='card border border-[#4b5563] w-full'>
-              <div>
-                <div className='w-full bg-amber-300 h-96'></div>
-              </div>
-               <h3 className='p-5 font-black text-center'>
-                TESDA LEAVE MANAGEMENT SYSTEM (TLMS)
-              </h3>
-            </div>
-            <div className='card border border-[#4b5563] w-full'>
-              <div>
-                <div className='w-full bg-amber-300 h-96'></div>
-              </div>
-               <h3 className='p-5 font-black text-center'>
-                TESDA LEAVE MANAGEMENT SYSTEM (TLMS)
-              </h3>
-            </div>
+            
           </div>
           
           <div className='max-w-sm sticky top-25 h-fit'>
