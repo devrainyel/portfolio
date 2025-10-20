@@ -14,7 +14,7 @@ export function Home() {
         <LiquidEther
           colors={['#00a8cc', '#6c63ff', '#B19EEF']}
           mouseForce={20}
-          cursorSize={100}
+          cursorSize={30}
           isViscous={false}
           viscous={30}
           iterationsViscous={32}
