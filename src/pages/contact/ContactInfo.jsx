@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export function ContactInfo() {
   return (
-    <div className='space-y-6 order-2 lg:order-1'>
+    <div className='space-y-6 order-2 lg:order-1 mb-10 lg:mb-0'>
       <a
         className='flex items-center gap-4 p-4 rounded-lg border border-[#4b5563] group relative'
         href='mailto:devrainyel@gmail.com'

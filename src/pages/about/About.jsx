@@ -110,7 +110,7 @@ export function About() {
       </section>
 
       {/* ===== SOFT SKILLS SECTION ===== */}
-      <section className="mt-20 sm:mt-40 flex flex-col gap-10 justify-center items-center px-5">
+      <section className="mt-20 sm:mt-40 flex flex-col gap-10 justify-center items-center px-5 mb-10">
         <div className="w-full max-w-6xl text-center lg:text-left">
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-black">
             SOFT SKILLS

@@ -29,8 +29,8 @@ export function Projects() {
         <div className='flex justify-center gap-20 mb-[400px]'>
           <div className='w-full max-w-2xl space-y-28'>
             <div className='card border border-[#4b5563] w-full'>
-              <div>
-                <div className='w-full bg-amber-300 h-96'></div>
+              <div className='w-full'>
+                <img src="./LMS.JPG" className="object-cover h-96" alt="" />
               </div>
               <h3 className='p-5 font-black text-center'>
                 TESDA LEAVE MANAGEMENT SYSTEM (TLMS)
@@ -50,7 +50,7 @@ export function Projects() {
           <div className='max-w-sm sticky top-25 h-fit'>
             <h3 className="text-xl">Internship Project</h3>
             <p>
-              A full stack system that allows users to request a leave and admin
+              A full-stack system that allows users to request a leave and admin
               to manage the request that has role-based dashbooard for user and
               admin.
             </p>
