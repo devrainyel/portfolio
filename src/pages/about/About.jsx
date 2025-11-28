@@ -1,6 +1,5 @@
 import { Navbar } from "../../components/Navbar";
-import { RiMessageFill, RiLightbulbFlashFill } from "react-icons/ri";
-import { AiOutlineRise } from "react-icons/ai";
+import { SoftSkills } from "./SoftSkills";
 import { FrontendIcons } from "./FrontendIcons";
 import { BackendIcons } from "./BackendIcons";
 import { ToolsIcons } from "./ToolsIcons";
@@ -116,49 +115,7 @@ export function About() {
             SOFT SKILLS
           </h3>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20 max-w-6xl w-full">
-          <div className="border border-[#4b5563] rounded-md p-6 sm:p-10">
-            <div className="flex items-center gap-2 mb-5">
-              <RiLightbulbFlashFill className="icon" size={25} />
-              <h3 className="text-lg sm:text-xl font-extrabold">
-                Problem-Solving
-              </h3>
-            </div>
-            <p className="text-sm sm:text-base leading-relaxed">
-              I enjoy identifying challenges and finding efficient solutions
-              through logical thinking and creativity. I approach problems step
-              by step, focusing on understanding the root cause and delivering
-              practical results.
-            </p>
-          </div>
-
-          <div className="border border-[#4b5563] rounded-md p-6 sm:p-10">
-            <div className="flex items-center gap-2 mb-5">
-              <AiOutlineRise className="icon" size={25} />
-              <h3 className="text-lg sm:text-xl font-extrabold">Adaptability</h3>
-            </div>
-            <p className="text-sm sm:text-base leading-relaxed">
-              I can easily adjust to new tools, environments, and workflows. I
-              see change as an opportunity to grow and learn, which helps me
-              stay flexible and productive in different situations.
-            </p>
-          </div>
-
-          <div className="border border-[#4b5563] rounded-md p-6 sm:p-10">
-            <div className="flex items-center gap-2 mb-5">
-              <RiMessageFill className="icon" size={25} />
-              <h3 className="text-lg sm:text-xl font-extrabold">
-                Communication
-              </h3>
-            </div>
-            <p className="text-sm sm:text-base leading-relaxed">
-              I value teamwork and believe great results come from working
-              together. I communicate clearly, listen actively, and contribute
-              ideas to achieve shared goals with others.
-            </p>
-          </div>
-        </div>
+        <SoftSkills />
       </section>
     </>
   );
