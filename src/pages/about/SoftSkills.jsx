@@ -21,7 +21,7 @@ const cardContent = [
 
 export function SoftSkills() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20 max-w-6xl w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-20  lg:gap-20 max-w-6xl w-full">
       {cardContent.map((card, index) => (
         <div key={index} className="border border-[#4b5563] rounded-md p-6 sm:p-10">
           <div className="flex items-center gap-2 mb-5">

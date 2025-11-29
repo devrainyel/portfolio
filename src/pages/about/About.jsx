@@ -1,15 +1,14 @@
 import { Navbar } from "../../components/Navbar";
 import { SoftSkills } from "./SoftSkills";
-import { FrontendIcons } from "./FrontendIcons";
-import { BackendIcons } from "./BackendIcons";
-import { ToolsIcons } from "./ToolsIcons";
+import { TechSkills } from "./TechSkills";
+import { Footer } from "../../components/Footer";
+
 
 export function About() {
   return (
     <>
       <title>About</title>
       <Navbar />
-
       {/* ===== ABOUT SECTION ===== */}
       <section className="min-h-screen flex flex-col gap-10 justify-center items-center px-5">
         <div className="mt-[88px] max-w-6xl w-full">
@@ -21,7 +20,6 @@ export function About() {
               FULL-STACK DEVELOPER
             </h4>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 items-start">
             {/* Left Heading */}
             <div className="flex items-center justify-center">
@@ -29,7 +27,6 @@ export function About() {
                 DRIVEN TO LEARN. INSPIRED TO CREATE.
               </h3>
             </div>
-
             {/* About Text */}
             <div className="text-center lg:text-left">
               <p className="text-base sm:text-lg leading-relaxed">
@@ -49,7 +46,6 @@ export function About() {
                 experience with assigned tasks.
               </p>
             </div>
-
             {/* Image */}
             <div className="relative">
               <img
@@ -67,47 +63,15 @@ export function About() {
           </div>
         </div>
       </section>
-
       {/* ===== TECH SKILLS SECTION ===== */}
       <section className="mt-20 sm:mt-40 px-5 flex justify-center items-center">
         <div className="max-w-6xl w-full">
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-black mb-10 text-center lg:text-left">
             TECH SKILLS
           </h3>
-          <div className="flex flex-col gap-14">
-            {/* Frontend */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-              <h3 className="md:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">
-                FRONT-END
-              </h3>
-              <div className="md:col-span-7 flex flex-wrap justify-center md:justify-start gap-4">
-                <FrontendIcons />
-              </div>
-            </div>
-
-            {/* Backend */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-              <h3 className="md:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">
-                BACK-END
-              </h3>
-              <div className="md:col-span-7 flex flex-wrap justify-center md:justify-start gap-4">
-                <BackendIcons />
-              </div>
-            </div>
-
-            {/* Tools */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-              <h3 className="md:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">
-                TOOLS
-              </h3>
-              <div className="md:col-span-7 flex flex-wrap justify-center md:justify-start gap-4">
-                <ToolsIcons />
-              </div>
-            </div>
-          </div>
+          <TechSkills />
         </div>
       </section>
-
       {/* ===== SOFT SKILLS SECTION ===== */}
       <section className="mt-20 sm:mt-40 flex flex-col gap-10 justify-center items-center px-5 mb-10">
         <div className="w-full max-w-6xl text-center lg:text-left">
@@ -117,6 +81,7 @@ export function About() {
         </div>
         <SoftSkills />
       </section>
+      <Footer />
     </>
   );
 }

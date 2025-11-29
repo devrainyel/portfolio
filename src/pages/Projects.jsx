@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Navbar } from "../components/Navbar";
+import { Footer } from '../components/Footer';
 import { FaStarOfLife } from "react-icons/fa6";
 import {
     siHtml5,
@@ -30,11 +31,13 @@ const projectsData = [
         category: "Internship Project",
         imageSrc: "./LMS.JPG",
         description:
-            "A full-stack system developed for TESDA that allows employees to request leave electronically and enables administrators to efficiently manage, approve, or reject these requests through a secure, role-based dashboard.",
+            "A full-stack system with developed for TESDA that allows employees to request leave electronically and enables administrators to efficiently manage, approve, or reject these requests through a secure, role-based dashboard.",
         features: [
             "User role-based dashboards (Employee/Admin)",
             "Leave request submission and tracking",
             "Automated leave balance calculation",
+            "Real-time notification and email notification",
+            "Leave application PDF generation",
             "Admin approval workflow",
         ],
         techNames: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL"],
@@ -43,9 +46,9 @@ const projectsData = [
         id: "dogbreedsexplorer",
         title: "DOG BREEDS EXPLORER",
         category: "Personal Project",
-        imageSrc: "./LMS.JPG",
+        imageSrc: "./dogbreedsexplorerpreview.JPG",
         description:
-            "An application that uses an external API to fetch and display various dog breeds, including their images, temperament, and origin, built with a focus on fast rendering and responsive design.",
+            "A simple application that uses an external API to fetch and display various dog breeds, including their images, temperament, and origin, built with a focus on fast rendering and responsive design.",
         features: [
             "Search and filter functionality",
             "Dynamic fetching from external API",
@@ -119,8 +122,7 @@ export function Projects() {
                     <h3 className="text-6xl font-black">PROJECTS</h3>
                     <p className="text-xl">These are the projects I worked on</p>
                 </div>
-                <div className="flex justify-center gap-20 pb-[400px]">
-                    
+                <div className="flex justify-center gap-20 pb-[292px]">
                     {/* LEFT COLUMN: Project Cards (Observed Elements) */}
                     <div className="w-full max-w-2xl space-y-28">
                         {projectsData.map((projectPreview, index) => (
@@ -190,6 +192,7 @@ export function Projects() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     );
 }
