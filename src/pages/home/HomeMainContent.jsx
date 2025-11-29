@@ -1,4 +1,5 @@
 export function HomeMainContent() {
+    return (
   <>
     <h1 className="text-[40px] xs:text-[65px] sm:text-7xl leading-none inline-block">
       {"FULL-STACK".split("").map((letter, i) => (
@@ -21,5 +22,6 @@ export function HomeMainContent() {
       experiences. My goal is to craft interfaces that feel intuitive and
       meaningful to use.
     </p>
-  </>;
+  </>
+  );
 }
