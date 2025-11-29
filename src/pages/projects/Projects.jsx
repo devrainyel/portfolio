@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Navbar } from "../components/Navbar";
-import { Footer } from '../components/Footer';
+import { Navbar } from "../../components/Navbar";
+import { Footer } from '../../components/Footer';
 import { FaStarOfLife } from "react-icons/fa6";
 import {
     siHtml5,

@@ -1,4 +1,5 @@
 import { Navbar } from '../../components/Navbar';
+import { Footer } from '../../components/Footer';
 import { ContactForm } from './ContactForm';
 import { ContactInfo } from './ContactInfo';
 
@@ -19,6 +20,7 @@ export function Contact() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
