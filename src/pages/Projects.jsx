@@ -7,6 +7,9 @@ import {
     siJavascript,
     siPhp,
     siMysql,
+    siReact,
+    siTailwindcss,
+    siExpress
 } from "simple-icons";
 
 const technologies = [
@@ -15,6 +18,9 @@ const technologies = [
     { icon: siJavascript, name: "JavaScript", hex: siJavascript.hex },
     { icon: siPhp, name: "PHP", hex: siPhp.hex },
     { icon: siMysql, name: "MySQL", hex: siMysql.hex },
+    { icon: siReact, name: "ReactJS", hex: siReact.hex },
+    { icon: siTailwindcss, name: "TailwindCSS", hex: siTailwindcss.hex },
+    { icon: siExpress, name: "ExpressJS", hex: 'ffffff' }
 ];
 
 const projectsData = [
@@ -46,23 +52,8 @@ const projectsData = [
             "Responsive grid layout",
             "Detailed breed view page",
         ],
-        techNames: ["HTML", "JavaScript", "Bootstrap"],
-    },
-    {
-      id: "resumeanalyzer",
-      title: "RESUME ANALYZER",
-      category: "Personal Project",
-      imageSrc: "./LMS.JPG",
-      description:
-          "An application that uses an external API to fetch and display various dog breeds, including their images, temperament, and origin, built with a focus on fast rendering and responsive design.",
-      features: [
-          "Search and filter functionality",
-          "Dynamic fetching from external API",
-          "Responsive grid layout",
-          "Detailed breed view page",
-      ],
-      techNames: ["HTML", "JavaScript", "Bootstrap"],
-  }
+        techNames: ["TailwindCSS", "ReactJS", "ExpressJS"],
+    }
 ];
 
 // --- Component ---
@@ -160,10 +151,7 @@ export function Projects() {
                     {/* The content here now relies entirely on the 'selectedProject' state */}
                     <div className="max-w-sm sticky top-25 h-fit space-y-4">
                         <h3 className="text-xl font-bold">{selectedProject.category}</h3>
-                        <p className='text-lg font-semibold text-[#00a8cc]'>
-                            {selectedProject.title}
-                        </p>
-                        <p>
+                        <p className="text-md">
                             {selectedProject.description}
                         </p>
                         
@@ -171,8 +159,8 @@ export function Projects() {
                         <ul className='space-y-2'>
                             {selectedProject.features.map((feature, index) => (
                                 <li key={index} className="flex items-center gap-2 text-white">
-                                    <FaStarOfLife className="text-[#00a8cc] min-w-[16px]" />
-                                    <span>{feature}</span>
+                                    <FaStarOfLife className="text-[#00a8cc] w-[16px]" />
+                                    <span className="text-sm italic">{feature}</span>
                                 </li>
                             ))}
                         </ul>

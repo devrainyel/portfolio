@@ -51,7 +51,7 @@
     color: var(--hover-link);
   }
 
-  p, footer {
+  p, footer, span {
     font-family: var(--font-main);
     color: var(--foreground);
   }
