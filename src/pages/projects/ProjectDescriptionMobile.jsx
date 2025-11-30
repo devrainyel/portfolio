@@ -2,7 +2,7 @@ import { ProjectTechnologyUsed } from "./ProjectTechnologyUsed";
 import { FaStarOfLife } from "react-icons/fa6";
 import { technologies } from "./technologies";
 
-export function ProjectDescriptionInline({ project }) {
+export function ProjectDescriptionMobile({ project }) {
   // Filter technologies for this specific project
   const projectTechnologies = technologies.filter((tech) =>
     project.techNames.includes(tech.name)
