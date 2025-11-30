@@ -14,7 +14,7 @@ export function ProjectPreview({ projectRefs, selectedProject, projectPreview, i
       <div className="w-full">
         <img
           src={projectPreview.imageSrc}
-          className="object-cover h-96 w-full"
+          className="object-cover h-40 xs:h-96 w-full"
           alt={`Screenshot of the ${projectPreview.title} project`}
         />
       </div>
