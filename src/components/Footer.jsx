@@ -31,7 +31,7 @@ export function Footer() {
             <FaGithub size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/reniel-ryand-cuellar-b9343b242/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
@@ -47,7 +47,7 @@ export function Footer() {
             <IoMdMail size={24} />
           </a>
           <a
-            href="https://twitter.com/yourhandle"
+            href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter Profile"
@@ -60,11 +60,11 @@ export function Footer() {
         {/* Back to Top Button */}
         <button
           onClick={handleScrollToTop}
-          className="p-3 bg-gradient-to-r from-[#00A8CC] to-[#6C63FF] hover:bg-gradient-to-l text-white rounded-full shadow-lg transition duration-300 flex items-center space-x-2"
+          className="p-3 bg-gradient-to-r from-[#00A8CC] to-[#6C63FF] hover:bg-gradient-to-l text-white rounded-full shadow-lg transition duration-300 flex items-center md:space-x-2"
           aria-label="Scroll to top"
         >
-          <IoChevronUp  size={20} />
-          <span className="text-gray-300 text-sm font-medium hidden sm:inline">
+          <IoChevronUp className="animate-bounce"  size={20} />
+          <span className="text-gray-300 text-sm font-medium hidden sm:inline md">
             Back to Top
           </span>
         </button>
