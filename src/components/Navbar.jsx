@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const navLinks = [
   { name: 'HOME', path: '/' },
@@ -12,7 +13,7 @@ const navLinks = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setDark] = useState(false);
+  const [isDark, setDark] = useLocalStorage('is-dark-mode', false);
 
   const setTheme = () => {
     if (isDark) {
@@ -23,6 +24,14 @@ export function Navbar() {
       setDark(true);
     }
   };
+
+  useEffect(() => {
+    if (isDark) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+}, [isDark]);
 
   return (
     <>
