@@ -2,11 +2,11 @@ import { FrontendIcons } from "./FrontendIcons";
 import { BackendIcons } from "./BackendIcons";
 import { ToolsIcons } from "./ToolsIcons";
 
-export function TechSkills() {
+export function TechSkills({ isVisible = false }) {
   return (
     <div className="flex flex-col gap-14">
       {/* Frontend */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+      <div className={`grid grid-cols-1 md:grid-cols-12 gap-4 items-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={isVisible ? { animationDelay: '0.2s' } : {}}>
         <h3 className="md:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">
           FRONT-END
         </h3>
@@ -16,7 +16,7 @@ export function TechSkills() {
       </div>
 
       {/* Backend */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+      <div className={`grid grid-cols-1 md:grid-cols-12 gap-4 items-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={isVisible ? { animationDelay: '0.4s' } : {}}>
         <h3 className="md:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">
           BACK-END
         </h3>
@@ -26,7 +26,7 @@ export function TechSkills() {
       </div>
 
       {/* Tools */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+      <div className={`grid grid-cols-1 md:grid-cols-12 gap-4 items-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={isVisible ? { animationDelay: '0.6s' } : {}}>
         <h3 className="md:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left">
           TOOLS
         </h3>

@@ -19,11 +19,15 @@ const cardContent = [
   },
 ];
 
-export function SoftSkills() {
+export function SoftSkills({ isVisible = false }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-20  lg:gap-20 max-w-6xl w-full">
       {cardContent.map((card, index) => (
-        <div key={index} className="border border-[#4b5563] rounded-md p-6 sm:p-10">
+        <div 
+          key={index} 
+          className={`border border-[#4b5563] rounded-md p-6 sm:p-10 ${isVisible ? 'animate-fade-in-scale' : 'opacity-0'}`}
+          style={isVisible ? { animationDelay: `${0.4 + index * 0.15}s` } : {}}
+        >
           <div className="flex items-center gap-2 mb-5">
             <card.icon className="icon" size={25} /> 
             <h3 className="text-lg sm:text-xl font-extrabold">{card.title}</h3>
