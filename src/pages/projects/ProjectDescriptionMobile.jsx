@@ -15,8 +15,8 @@ export function ProjectDescriptionMobile({ project }) {
       {/* Features */}
       <ul className="space-y-2">
         {project.features.map((feature, idx) => (
-          <li key={idx} className="flex items-center gap-2 text-white">
-            <FaStarOfLife className="text-[#00a8cc] w-[16px]" />
+          <li key={idx} className="flex items-start gap-2 text-white">
+            <FaStarOfLife className="text-[#00a8cc] w-[16px] h-[16px] flex-shrink-0 mt-0.5" />
             <span className="text-sm italic">{feature}</span>
           </li>
         ))}
