@@ -15,6 +15,8 @@ export const projectsData = [
       "Admin approval workflow",
     ],
     techNames: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL"],
+    liveUrl: "https://gov.tesdaregion3.com/",
+    githubUrl: "#",
   },
   {
     id: "dogbreedsexplorer",
@@ -28,8 +30,10 @@ export const projectsData = [
       "Search and filter functionality",
       "Dynamic fetching from external API",
       "Detailed breed view page",
-    ],
+    ],s
     techNames: ["TailwindCSS", "ReactJS", "NodeJS", "ExpressJS"],
+    liveUrl: "https://gov.tesdaregion3.com/",
+    githubUrl: "https://github.com/devrainyel/dog-breeds-explorer",
   },
   {
     id: "convofy",
@@ -46,5 +50,7 @@ export const projectsData = [
       "Integrated Arcjet security middleware to provide application-level rate limiting and protection against automated bot attacks.",
     ],
     techNames: ["TailwindCSS", "ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
+    liveUrl: "https://convofy-myw6.onrender.com",
+    githubUrl: "https://github.com/devrainyel/convofy",
   },
 ];
