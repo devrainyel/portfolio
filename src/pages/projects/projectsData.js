@@ -30,7 +30,7 @@ export const projectsData = [
       "Search and filter functionality",
       "Dynamic fetching from external API",
       "Detailed breed view page",
-    ],s
+    ],
     techNames: ["TailwindCSS", "ReactJS", "NodeJS", "ExpressJS"],
     liveUrl: "https://gov.tesdaregion3.com/",
     githubUrl: "https://github.com/devrainyel/dog-breeds-explorer",
