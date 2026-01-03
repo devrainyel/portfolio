@@ -6,17 +6,9 @@ import { ProjectDescriptionMobile } from "./ProjectDescriptionMobile";
 import { technologies } from "./technologies";
 import { projectsData } from "./projectsData";
 import { useProjectObserver } from "../../hooks/useProjectObserver";
-import { useEffect } from 'react';
 
 export function Projects() {
   const { selectedProject, projectRefs } = useProjectObserver(projectsData);
-
-  useEffect(() => {
-    if (window.history.scrollRestoration) {
-      window.history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-  }, []);
 
   // Logic to filter technologies for the selected project
   const relevantTechnologies = technologies.filter((tech) =>

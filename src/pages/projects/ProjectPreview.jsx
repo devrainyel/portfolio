@@ -8,7 +8,7 @@ export function ProjectPreview({ projectRefs, selectedProject, projectPreview, i
       className={`card border w-full transition-all cursor-pointer group overflow-hidden
             ${
               selectedProject.id === projectPreview.id
-                ? "border-[#00a8cc] shadow-lg shadow-[#00a8cc]/20 scale-[1.01]"
+                ? "border-[#00a8cc] shadow-xl shadow-[#00a8cc]/20 scale-[1.01]"
                 : "border-[#4b5563] hover:border-gray-500"
             }`}
     >
