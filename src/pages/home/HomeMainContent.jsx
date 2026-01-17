@@ -19,10 +19,10 @@ export function HomeMainContent() {
       I'm Reniel
     </h3>
     <p className="text-[13px] sm:text-lg text-center mb-20 px-5 max-w-[750px] animate-fade-in-up" style={{ animationDelay: '0.55s', opacity: 0 }}>
-      I enjoy building modern web applications with React, Tailwind CSS, and
-      JavaScript. I focus on creating clean, efficient, and user-centered
-      experiences. My goal is to craft interfaces that feel intuitive and
-      meaningful to use.
+      I build clean, modern web applications using React, Tailwind CSS, and JavaScript. 
+      I'm passionate about creating interfaces that are both intuitive to use and efficient 
+      under the hood. My focus is on writing maintainable code that delivers great user 
+      experiences while solving real-world problems.
     </p>
   </>
   );
