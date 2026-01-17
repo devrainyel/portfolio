@@ -9,6 +9,7 @@ import {
     siExpress,
     siNodedotjs,
     siMongodb,
+    siNextdotjs,
     siSocketdotio,
   } from "simple-icons";
 
@@ -24,4 +25,5 @@ export const technologies = [
     { icon: siExpress, name: "ExpressJS", hex: "ffffff" },
     { icon: siMongodb, name: "MongoDB", hex: siMongodb.hex },
     { icon: siSocketdotio, name: "Socket.io", hex: siSocketdotio.hex },
+    { icon: siNextdotjs, name: "NextJS", hex: siNextdotjs.hex },
   ];
