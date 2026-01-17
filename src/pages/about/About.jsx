@@ -3,12 +3,14 @@ import { Navbar } from "../../components/Navbar";
 import { SoftSkills } from "./SoftSkills";
 import { TechSkills } from "./TechSkills";
 import { Footer } from "../../components/Footer";
+import { GitHubCalendar } from 'react-github-calendar';
 
 
 export function About() {
   const [isVisible, setIsVisible] = useState(false);
   const [techSkillsVisible, setTechSkillsVisible] = useState(false);
   const [softSkillsVisible, setSoftSkillsVisible] = useState(false);
+  const [githubVisible, setGithubVisible] = useState(false);
 
   useEffect(() => {
     // Trigger main section animation on mount
@@ -37,8 +39,20 @@ export function About() {
       { threshold: 0.1 }
     );
 
+    const githubObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setGithubVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
     const techSkillsElement = document.getElementById("tech-skills-section");
     const softSkillsElement = document.getElementById("soft-skills-section");
+    const githubElement = document.getElementById("github-section");
 
     if (techSkillsElement) {
       techSkillsObserver.observe(techSkillsElement);
@@ -46,10 +60,14 @@ export function About() {
     if (softSkillsElement) {
       softSkillsObserver.observe(softSkillsElement);
     }
+    if (githubElement) {
+      githubObserver.observe(githubElement);
+    }
 
     return () => {
       if (techSkillsElement) techSkillsObserver.unobserve(techSkillsElement);
       if (softSkillsElement) softSkillsObserver.unobserve(softSkillsElement);
+      if (githubElement) githubObserver.unobserve(githubElement);
     };
   }, []);
 
@@ -128,6 +146,19 @@ export function About() {
           </h3>
         </div>
         <SoftSkills isVisible={softSkillsVisible} />
+      </section>
+      {/* ===== GITHUB CONTRIBUTIONS SECTION ===== */}
+      <section id="github-section" className="mt-20 sm:mt-40 flex flex-col gap-10 justify-center items-center px-5 mb-10">
+        <div className="w-full max-w-6xl text-center lg:text-left">
+          <h3 className={`text-4xl sm:text-5xl md:text-6xl font-black ${githubVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={githubVisible ? { animationDelay: '0.1s' } : {}}>
+            GITHUB CONTRIBUTIONS
+          </h3>
+        </div>
+        <div className={`w-full max-w-6xl flex justify-center ${githubVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={githubVisible ? { animationDelay: '0.3s' } : {}}>
+          <div className="github-calendar-container">
+            <GitHubCalendar username="devrainyel" />
+          </div>
+        </div>
       </section>
       <Footer />
     </>

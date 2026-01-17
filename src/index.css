@@ -93,6 +93,32 @@
   .dark input:focus {
     color: var(--foreground)
   }
+
+  /* GitHub Calendar month labels theme fix */
+  .github-calendar-container text {
+    fill: var(--foreground) !important;
+  }
+  
+  .dark .github-calendar-container text {
+    fill: #e6edf0 !important;
+  }
+  
+  /* More specific selectors for GitHub calendar */
+  .github-calendar-container .ContributionCalendar-label {
+    fill: var(--foreground) !important;
+  }
+  
+  .dark .github-calendar-container .ContributionCalendar-label {
+    fill: #e6edf0 !important;
+  }
+  
+  .github-calendar-container svg g text {
+    fill: var(--foreground) !important;
+  }
+  
+  .dark .github-calendar-container svg g text {
+    fill: #e6edf0 !important;
+  }
 }
 
 @layer components {
