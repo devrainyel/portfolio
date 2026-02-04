@@ -19,6 +19,22 @@ export const projectsData = [
     githubUrl: "#",
   },
   {
+    id: "webflowsite",
+    title: "FARLINE BLOG SITE",
+    category: "Personal Project",
+    imageSrc: "./webflow-site.JPG",
+    description:
+      "Blog site for a mock brand using Webflow with a focus on modern design and responsive layout.",
+    features: [
+      "Dynamic CMS Architecture Streamlined content management for effortless blog updates",
+      "Mobile-First Responsive Design A flawless reading experience across all device sizes",
+      "SEO Semantic Structure Clean HTML hierarchy to boost search engine visibility",
+    ],
+    techNames: ["Webflow"],
+    liveUrl: "https://rainyels-blog-site.webflow.io/",
+    githubUrl: "#",
+  },
+  {
     id: "marcimetzger",
     title: "MARCI METZGER",
     category: "Personal Project",

@@ -11,6 +11,7 @@ import {
     siMongodb,
     siNextdotjs,
     siSocketdotio,
+    siWebflow,
   } from "simple-icons";
 
 export const technologies = [
@@ -26,4 +27,5 @@ export const technologies = [
     { icon: siMongodb, name: "MongoDB", hex: siMongodb.hex },
     { icon: siSocketdotio, name: "Socket.io", hex: siSocketdotio.hex },
     { icon: siNextdotjs, name: "NextJS", hex: siNextdotjs.hex },
+    { icon: siWebflow, name: "Webflow", hex: siWebflow.hex },
   ];
